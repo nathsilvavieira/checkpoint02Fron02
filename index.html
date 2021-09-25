@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="midias/pata.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi&display=swap" rel="stylesheet">
+    
+
+    <title>To Do List</title>
+</head>
+<body>
+    <video id="bckg-api-video" autoplay loop class="bg_video" muted>
+
+    </video>
+    <header>
+        <nav class="header__navegacao">
+            <a href="api.html">Tarefas API</a>
+            <a href="equipe.html" target="_blank">Equipe</a>
+        </nav>
+        <div class="tema">
+            <div id="noturno"></div>
+              <div class="circulo"></div>
+        </div>
+    </header>
+    <main class="container">
+        <details>
+            <summary>Criar Tarefa</summary>
+            <form action="" id="formulario">
+                <input placeholder="Data limite" type="text" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" id="date" name="dataLimite">
+                <input  name="descricao" type="text" id="descricao" placeholder="Descrição da tarefa" maxlength="47">
+                <button id="btn-salvar">Salvar</button>
+            </form>
+        </details>
+
+        <section id="secao-tarefas" class="container__section">
+            <article>
+                <div class="section__box-icons">
+                    <input data-click-checked type="image" src="./midias/check.png" alt="checked">
+                    <input data-click-color type="image" src="./midias/color-palette.png" alt="cor">
+                    <input type="image" src="./midias/bin.png" alt="lixeira">
+                </div>
+                <div class="escolhas-flex paleta"></div>
+                <div class="section__box-paragrafo">
+                    <p>Ir ao supermercado e comprar carne.</p>
+                </div>
+                <div class="section__box-datas">
+                    <p>Data criação yyyy-mm-dd</p>
+                    <p>Data limite yyyy-mm-dd</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <p>Certified Tech Developer 2021</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+    <script src="./js/modoDark.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

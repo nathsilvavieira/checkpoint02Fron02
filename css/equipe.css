@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: #030200;
+  color: white;
+  font-weight: bold;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  text-align: center;
+  font-size: 15px;
+  background: linear-gradient(120deg, #031E6B, #4DE4CF);
+}
+
+.logo__menu {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  padding: 10px;
+  text-align: justify;
+}
+
+.logo__menu img {
+  width: 27%;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu li a {
+  color: #031e6d;
+  font-weight: bold;
+}
+
+.flex-container {
+  margin: 300px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+li {
+  display: inline-block;
+}
+
+.equipe > ul > li:hover {
+  border-radius: 50%;
+  -webkit-box-shadow: 1px -1px 5px #3f3f3f;
+          box-shadow: 1px -1px 5px #3f3f3f;
+  -webkit-transform: translate(0%, -7%);
+          transform: translate(0%, -7%);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+footer {
+  padding: 15px;
+  text-align: center;
+  bottom: 0;
+}
+
+.flex-item-1 {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+/*# sourceMappingURL=equipe.css.map */
