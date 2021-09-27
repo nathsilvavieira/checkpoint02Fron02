@@ -19,7 +19,8 @@
   width: auto;
   height: auto;
   z-index: -1000;
-  background: url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
 }
 
 header {
@@ -51,13 +52,15 @@ header nav {
 header nav a {
   font-weight: 600;
   font-size: 16px;
-  color: #B8336A;
+  color: #000;
+  text-shadow: 1px 1px 2px #B8336A;
 }
 
 header nav a:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   color: #d32a70;
+  text-shadow: 1px 1px 2px #000;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -122,6 +125,7 @@ main section article {
 
 main section article p {
   color: #000;
+  text-shadow: 1px 1px 2px black;
 }
 
 main section article:hover {

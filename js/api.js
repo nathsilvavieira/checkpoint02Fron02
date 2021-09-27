@@ -44,7 +44,7 @@ async function requisitarTarefas() {
         }
     } catch (erro) {
         console.log(erro.name);
-        return erro.name;
+        return alert(Error("Falha em requisitar os dados. \n Verifique sua conexão com a Internet ou tente novamente mais tarde")); 
     }
 }
 

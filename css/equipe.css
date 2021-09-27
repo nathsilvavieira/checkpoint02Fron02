@@ -29,6 +29,7 @@ header nav a {
   color: #000;
   font-size: 18px;
   font-weight: 600;
+  text-shadow: 1px 1px 2px black;
 }
 
 header nav a:hover {
@@ -38,7 +39,8 @@ header nav a:hover {
 body {
   text-align: center;
   font-size: 15px;
-  background: url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, rgba(0, 0, 0, 0.5))), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
 }
 
 .logo__menu {
