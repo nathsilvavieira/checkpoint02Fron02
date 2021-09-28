@@ -1,11 +1,14 @@
 @charset "UTF-8";
 * {
+  /*seletor global*/
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+/*configurações de reset comportamento padrão navegador*/
+/*configuração de loading geral*/
 #loading {
   position: fixed;
   display: -webkit-box;
@@ -25,9 +28,11 @@
   right: 0;
   bottom: 0;
   background: url(../midias/cat_white_sitting_kitty-Animal_photo_Wallpaper_1366x768.jpg) 100%;
+  /*inserindo imagem no fundo da animação*/
   background-size: cover;
 }
 
+/* desenhando circulos */
 .crirculo {
   width: 20px;
   height: 20px;
@@ -38,6 +43,7 @@
   animation: quicar .4s ease-out alternate-reverse infinite;
 }
 
+/* gerando movimento das bolinhas*/
 .load-1 {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;

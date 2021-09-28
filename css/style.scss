@@ -1,13 +1,13 @@
-*{
+*{/*seletor global resete da configuração padrão*/
     margin: 0;
     bottom: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     text-decoration-style: none;
-    font-family: 'Yaldevi', sans-serif;
+    font-family: 'Yaldevi', sans-serif; /*fonte google*/
 }
-
+/*aplicando imagem de fundo com uma camada fina para melhorar leitura da tela*/
 .bg_video{
     position: fixed;
 	right: 0; 
@@ -19,7 +19,7 @@
     z-index: -1000;
     background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../midias/1200db5e5d71b047fa17158f0246736f.jpg') repeat;
 }
-
+/* Estilo cabeçalho com efeito ao passar cursor por cima dos elementos*/
 header {
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@ header {
         }
     }
 }
-
+/* estilo da main, responsavel por alinhar os elementos em linhas e colunas */
 main {
     display: flex;
     justify-content: center;
@@ -54,7 +54,6 @@ main {
     margin-top: 10px;
 
     section {
-        //background-color: #FF6B6B;
         display: flex;
         justify-content: center;
         flex-flow: row wrap;
@@ -62,8 +61,6 @@ main {
         min-height: 75vh;
         border: 3px solid #E5FCFF;
         border-radius: 15px 5px;
-
-        
         article {
             background-color: #FFFFFF;
             border: 1px dotted #E5FCFF;
@@ -99,7 +96,6 @@ main {
                 width: 32px;
                 height: 32px;
                 padding: 5px;
-                // border: 1px solid black;
             }
         }
     }
@@ -109,15 +105,13 @@ main {
     filter: grayscale(0.75);
     opacity: 0.8;
 }
-
+/*configurações de estilos que são iniciadas no JS*/
 .escolhas-none {
     display: none;
 }
 
 .escolhas-flex {
     position: relative;
-    // top: 35px;
-    // left: 0;
     width: 180px;
     height: 30px;
     display: flex;
@@ -135,7 +129,6 @@ main {
             border: 1px solid black;
         }
     }
-    // border: 1px solid black;
 }
 
 .section__box-icons {
@@ -166,14 +159,13 @@ main {
         font-size: 12px;
     }
 }
-
+/*Configuração do form que fica oculto na tela*/
 details {
     text-align: center;
     color:#C490D1;
     summary {
         padding: 10px;
         font-size: 22px;
-        // list-style:disc;
     }
 }
 
@@ -198,14 +190,14 @@ form {
         }
     }
 
-    button {
+    button { 
         height: 40px;
         border-radius: 10px;
         margin: 7px;
         font-weight: bold;
         color: #C490D1;
         border:none;
-        &:hover {
+        &:hover { /*configuração de interação do botao*/
             background-color: #C490D1;
             color: #E5FCFF;
             cursor: pointer;
@@ -214,7 +206,7 @@ form {
         }
     }
 }
-
+/* Modo dark  */
 .tema {
     display: flex;
     justify-content: flex-start;
@@ -223,7 +215,6 @@ form {
     width: 60px;
     height: 35px;
     background-color: rgb(44, 6, 80);
-    // margin: 0 auto;
     border-radius: 50rem;
     margin-left: 20px;
 }
@@ -255,7 +246,7 @@ form {
       bottom: 0;
       color:#FF6B6B;
   }
-
+ /*MEDIA QUERIES*/
  //animations
 
 @keyframes deslizar-1 {
@@ -267,7 +258,7 @@ form {
     100%   { transform: translateX(0%); }
   } 
 
-//media query
+// responsivo tela
 
 @media (min-width: 429px) {
     header {
@@ -292,7 +283,6 @@ form {
     .tema {
         margin-left: 2.5vw;
         grid-area: "tema";
-        // align-self:stretch;
     }
 
     .circulo-2 {

@@ -1,4 +1,6 @@
+@charset "UTF-8";
 * {
+  /*seletor global resete da configuração padrão*/
   margin: 0;
   bottom: 0;
   padding: 0;
@@ -8,8 +10,10 @@
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
   font-family: 'Yaldevi', sans-serif;
+  /*fonte google*/
 }
 
+/*aplicando imagem de fundo com uma camada fina para melhorar leitura da tela*/
 .bg_video {
   position: fixed;
   right: 0;
@@ -23,6 +27,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
 }
 
+/* Estilo cabeçalho com efeito ao passar cursor por cima dos elementos*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,6 +70,7 @@ header nav a:hover {
   transition: all 0.5s ease-in-out;
 }
 
+/* estilo da main, responsavel por alinhar os elementos em linhas e colunas */
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,6 +157,7 @@ main section article input {
   opacity: 0.8;
 }
 
+/*configurações de estilos que são iniciadas no JS*/
 .escolhas-none {
   display: none;
 }
@@ -225,6 +232,7 @@ main section article input {
   font-size: 12px;
 }
 
+/*Configuração do form que fica oculto na tela*/
 details {
   text-align: center;
   color: #C490D1;
@@ -274,6 +282,7 @@ form button {
 }
 
 form button:hover {
+  /*configuração de interação do botao*/
   background-color: #C490D1;
   color: #E5FCFF;
   cursor: pointer;
@@ -283,6 +292,7 @@ form button:hover {
   transition: .3s ease-in-out;
 }
 
+/* Modo dark  */
 .tema {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,6 +346,7 @@ footer {
   color: #FF6B6B;
 }
 
+/*MEDIA QUERIES*/
 @-webkit-keyframes deslizar-1 {
   0% {
     -webkit-transform: translateX(0%);
@@ -346,7 +357,6 @@ footer {
             transform: translateX(100%);
   }
 }
-
 @keyframes deslizar-1 {
   0% {
     -webkit-transform: translateX(0%);

@@ -1,4 +1,4 @@
-* {
+* { /*seletor global*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,9 +6,9 @@
     text-decoration-style: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family: 'Yaldevi', sans-serif;
+    font-family: 'Yaldevi', sans-serif; /* adicinando fonte do google no seletor global*/
 }
-
+/*configurações de estilo do header, tag nav e a, adicionando interação ao passar cursor sobre texto*/
 header {
     display: flex;
     width: 100%;
@@ -26,12 +26,12 @@ header {
 
     }
 }
-
+/* configurações gerais do body */
 body
 {
     text-align: center;
     font-size: 15px;
-    background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)50%), url('../midias/1200db5e5d71b047fa17158f0246736f.jpg') repeat;
+    background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)50%), url('../midias/1200db5e5d71b047fa17158f0246736f.jpg') repeat; /*adicionando camada fina sobre imagem, adicionando imagem que quero como background no site e pedindo para ela se repetir na tela*/
    
 }
 .logo__menu {
@@ -58,7 +58,7 @@ body
 
 .flex-container
 {
-    // width:65vw;
+    
     margin:300px auto;
     display: flex;
     gap: 60px;
@@ -66,7 +66,7 @@ body
     justify-content: space-around;
 
 }
-
+/*estilização dos icones  para aparecerem lado a lado na tela*/
 li
 {
     display: inline-block;
@@ -78,7 +78,7 @@ li
     transform:translate(0%, -7%);
     transition: 0.5s ease-in-out;
 }
-
+/* estilo itens footer*/
 footer {
     padding: 15px;
     text-align: center;

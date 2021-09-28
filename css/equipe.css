@@ -1,4 +1,6 @@
+@charset "UTF-8";
 * {
+  /*seletor global*/
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -9,8 +11,10 @@
   list-style: none;
   scroll-behavior: smooth;
   font-family: 'Yaldevi', sans-serif;
+  /* adicinando fonte do google no seletor global*/
 }
 
+/*configurações de estilo do header, tag nav e a, adicionando interação ao passar cursor sobre texto*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,11 +40,13 @@ header nav a:hover {
   color: #B8336A;
 }
 
+/* configurações gerais do body */
 body {
   text-align: center;
   font-size: 15px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, rgba(0, 0, 0, 0.5))), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
+  /*adicionando camada fina sobre imagem, adicionando imagem que quero como background no site e pedindo para ela se repetir na tela*/
 }
 
 .logo__menu {
@@ -83,6 +89,7 @@ body {
       justify-content: space-around;
 }
 
+/*estilização dos icones  para aparecerem lado a lado na tela*/
 li {
   display: inline-block;
 }
@@ -97,6 +104,7 @@ li {
   transition: 0.5s ease-in-out;
 }
 
+/* estilo itens footer*/
 footer {
   padding: 15px;
   text-align: center;

@@ -1,4 +1,6 @@
+@charset "UTF-8";
 * {
+  /*seletor global*/
   margin: 0;
   bottom: 0;
   padding: 0;
@@ -8,8 +10,10 @@
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
   font-family: 'Yaldevi', sans-serif;
+  /*fonte google*/
 }
 
+/*aplicando imagem de fundo com uma camada fina para melhorar leitura da tela*/
 .bg_video {
   position: fixed;
   right: 0;
@@ -23,19 +27,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url("../midias/1200db5e5d71b047fa17158f0246736f.jpg") repeat;
 }
 
-/* .bg_video{
-	position: fixed; 
-	right: 0; 
-	bottom: 0;
-	min-width: 100%; 
-	min-height: 100%;
-	width: auto; 
-	height: auto; 
-	z-index: -1000;
-	background: url('../midias/1200db5e5d71b047fa17158f0246736f.jpg') repeat;
-	background-size: cover; 
-}
- */
+/* Estilo cabeçalho com efeito ao passar cursor por cima dos elementos*/
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,6 +70,7 @@ header nav a:hover {
   transition: all 0.5s ease-in-out;
 }
 
+/* estilo da main, responsavel por alinhar os elementos em linhas e colunas */
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +125,7 @@ main section article {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   background-image: url("../midias/gatinho.jpg");
+  /*adicionando imagem para efeito personalizado do card*/
   background-position: center;
   background-size: cover;
   opacity: 0.89;
@@ -145,6 +139,7 @@ main section article p {
 }
 
 main section article:hover {
+  /*efeito quando passar cursor por cima*/
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
   -webkit-transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -202,6 +197,7 @@ main section article .tachado {
   color: #000;
 }
 
+/* Modo dark  */
 .tema {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,6 +227,7 @@ main section article .tachado {
   margin-left: 10%;
 }
 
+/* responsavel por criar ilusão de lua e sol*/
 .circulo-2 {
   position: absolute;
   top: 0.45em;
@@ -254,6 +251,7 @@ footer {
   text-align: center;
 }
 
+/*MEDIA QUERIES*/
 @-webkit-keyframes deslizar-1 {
   0% {
     -webkit-transform: translateX(0%);
@@ -264,7 +262,6 @@ footer {
             transform: translateX(100%);
   }
 }
-
 @keyframes deslizar-1 {
   0% {
     -webkit-transform: translateX(0%);

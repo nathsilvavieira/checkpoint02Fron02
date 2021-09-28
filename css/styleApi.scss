@@ -1,13 +1,13 @@
-*{
+*{ /*seletor global*/
     margin: 0;
     bottom: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     text-decoration-style: none;
-    font-family: 'Yaldevi', sans-serif;
+    font-family: 'Yaldevi', sans-serif; /*fonte google*/
 }
-
+/*aplicando imagem de fundo com uma camada fina para melhorar leitura da tela*/
 .bg_video{
     position: fixed;
 	right: 0; 
@@ -19,20 +19,7 @@
     z-index: -1000;
     background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../midias/1200db5e5d71b047fa17158f0246736f.jpg') repeat;
 }
-
-/* .bg_video{
-	position: fixed; 
-	right: 0; 
-	bottom: 0;
-	min-width: 100%; 
-	min-height: 100%;
-	width: auto; 
-	height: auto; 
-	z-index: -1000;
-	background: url('../midias/1200db5e5d71b047fa17158f0246736f.jpg') repeat;
-	background-size: cover; 
-}
- */
+/* Estilo cabeçalho com efeito ao passar cursor por cima dos elementos*/
 header {
     display: flex;
     justify-content: center;
@@ -57,7 +44,7 @@ header {
         } 
     }
 }
-
+/* estilo da main, responsavel por alinhar os elementos em linhas e colunas */
 main {
     display: flex;
     justify-content: center;
@@ -74,7 +61,6 @@ main {
         border-radius: 15px 5px;
         
         article {
-            // border: 1px dotted black;
             display: grid;
             grid-template-rows: 0.5fr 1fr 0.5fr;
             grid-template-columns: 1fr;
@@ -88,7 +74,7 @@ main {
             height: 180px;
             justify-content: flex-start;
             flex-flow: row wrap;
-            background-image: url('../midias/gatinho.jpg');
+            background-image: url('../midias/gatinho.jpg'); /*adicionando imagem para efeito personalizado do card*/
             background-position: center;
             background-size: cover;
             opacity: 0.89;
@@ -100,12 +86,12 @@ main {
                 margin-bottom: 10px;
             }
             
-            &:hover {
+            &:hover { /*efeito quando passar cursor por cima*/
                 transform: scale(1.03);
                 transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
             }
 
-            .tachado {
+            .tachado { 
                 text-decoration: line-through;
             }
         }
@@ -143,7 +129,7 @@ main {
 }
 
 
-
+/* Modo dark  */
 
 .tema {
     display: flex;
@@ -164,7 +150,7 @@ main {
     border-radius: 50%;
     margin-left: 10%;
   }
-  
+  /* responsavel por criar ilusão de lua e sol*/
 .circulo-2 {
     position: absolute;
     top: 0.45em;
@@ -176,7 +162,6 @@ main {
     align-self: start;
     transition-duration: 0.3s;
     z-index: 1;
-    //border: 1px solid red;
   }
 
   footer {
@@ -185,7 +170,9 @@ main {
       text-align: center;
   }
 
- //animations
+  /*MEDIA QUERIES*/
+
+ //animations 
 
 @keyframes deslizar-1 {
     0%  {transform: translateX(0%); }
@@ -196,7 +183,7 @@ main {
     100%   { transform: translateX(0%); }
   } 
 
-//media query
+// responsivo tela
 
 @media (min-width: 429px) {
     header {

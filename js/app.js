@@ -44,7 +44,7 @@ function aplicarBackground(el, article) { /**função que recebe dois parametros
         }
 }
 
-var cores = ["#FFFCE8", "#DEDBD8", "#D8FFDD", "#CCFFFF","#E5FCFF", "#CCCCFF"]; /**criando paleta de cores */
+var cores = ["#FFFCE8", "#DEDBD8", "#D8FFDD", "#CCFFFF","#E5FCFF", "#CCCCFF"]; /**inserindo as cores da paleta de cores */
 function criarPaleta(artigo) { /**FUNÇÃO QUE CRIA PALETA DE CORES */
     let divPaleta = document.createElement('div'); /**pegando elemento div */
     divPaleta.setAttribute('class', 'child-paleta'); /**setando atributos na div */
@@ -59,36 +59,36 @@ function criarPaleta(artigo) { /**FUNÇÃO QUE CRIA PALETA DE CORES */
     });
     return divPaleta; /**pedindo para retornar divPaleta */
 }
-
-let iconsColor = document.querySelectorAll('[data-click-color]');
-iconsColor.forEach(el => el.addEventListener('mouseover', (e) => {
-    e.preventDefault();
+/**função cria os icones da paleta de cores */
+let iconsColor = document.querySelectorAll('[data-click-color]'); /**pegando elemento  */
+iconsColor.forEach(el => el.addEventListener('mouseover', (e) => {  /**percorrendo os elementos e aplicando atributos e valores dinamicamente  */
+    e.preventDefault(); /**previnindo comportamento padrao do elemento */
     let divInput = el.parentElement;
     let article = divInput.parentElement;
     let paletaCores = article.children[1];
-    paletaCores.appendChild(criarPaleta(article));
-    paletaCores.classList.remove('escolhas-none');
+    paletaCores.appendChild(criarPaleta(article)); /**inserindo elemento filho no html */
+    paletaCores.classList.remove('escolhas-none'); /**removendo escolhas none  */
     el.disabled = true;
 }))
-
-let iconsLixeira = document.querySelectorAll('[data-click-lixeira]');
-iconsLixeira.forEach(el => el.addEventListener('click', (e) => {
-    e.preventDefault();
-    let idTarefa = parseInt(el.id);
-    let indexTarefa = indexTarefas.indexOf(idTarefa);
-    console.log(indexTarefa)
-    let confirmacao = confirm("Você quer mesmo excluir essa tarefa?");
-    if (confirmacao) {
+/**função cria os icone lixeira */
+let iconsLixeira = document.querySelectorAll('[data-click-lixeira]'); /**pegando elemento  */
+iconsLixeira.forEach(el => el.addEventListener('click', (e) => {/**percorrendo os elementos e criando evento escutador que iniciará quando clicado  */
+    e.preventDefault(); /**previnindo comportamento padrao do elemento */
+    let idTarefa = parseInt(el.id); /**passando item para inteiro */
+    let indexTarefa = indexTarefas.indexOf(idTarefa); /**transformando posicionamento do array em num id tarefa */
+    console.log(indexTarefa)/** printando no console */
+    let confirmacao = confirm("Você quer mesmo excluir essa tarefa?"); /** confirmando exclusão do card */
+    if (confirmacao) { /** Criando condicional caso verdadeira seguirá com exclusão dos cards */
         minhasTarefas.splice(indexTarefa, 1);
         indexTarefas.splice(indexTarefa, 1);//removendo um elemento do indexCards para manter o sincronismo com o index de meusCards
-        location.reload();
+        location.reload(); /** recarregando pagina */
     } else
-        e.stopPropagation();
+        e.stopPropagation(); /**função que impede a propagação do evento por seus respectivos listeners. */
 
-    localStorage.setItem('arrayTarefas', JSON.stringify(minhasTarefas));//atualização do localStorage
-    localStorage.setItem('idsTarefas', JSON.stringify(indexTarefas));//atualização do localStorage
+    localStorage.setItem('arrayTarefas', JSON.stringify(minhasTarefas));/** converte js em js e atualiza localStorage */
+    localStorage.setItem('idsTarefas', JSON.stringify(indexTarefas)); /*atualização do localStorage*/
 }))
-
+/*FUNÇÃO TRANSFORMADORA DE ITENS EM OBJETO */
 function objetoTarefa() {
     let tarefa = {};
     tarefa.dataCriacao = dataAtual;
@@ -98,15 +98,15 @@ function objetoTarefa() {
     tarefa.idTarefa = idGenerator();
     return tarefa;
 }
-
-function idGenerator() {//função para gerar ids
+/* função para gerar ids */
+function idGenerator() {
     return Math.round(Math.random() * 10000);
 }
 
-
-function criarTarefa(dataCriacao, dataLimite, descricao, id) {
-    const artigo = document.createElement('article');
-    artigo.innerHTML =
+/*FUNÇÃO CRIAR TAREFAS */
+function criarTarefa(dataCriacao, dataLimite, descricao, id) { /* passando parametros da função */
+    const artigo = document.createElement('article'); /* criando elemento article */
+    artigo.innerHTML = /* adicionando elementos dentro da tag article no html */
         `
     <div class="section__box-icons">
         <input data-click-checked id="${id}" type="image" src="./midias/check.png" alt="checked">
@@ -120,32 +120,32 @@ function criarTarefa(dataCriacao, dataLimite, descricao, id) {
     <div class="section__box-datas">
         <p>Data de criação: ${dataCriacao}</p>
         <p>Data limite: ${dataLimite}</p>
-    </div>
-    `
+    </div> 
+    ` /** usando template string para adicionar elementos do html */
     return artigo;
 }
-
+/* Criando evento escutador para botão Salvar os cards de tarefas */
 botaoSalvar.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (form.dataLimite.value === '' || form.descricao.value === '') {//alerta de campos vazios
+    if (form.dataLimite.value === '' || form.descricao.value === '') {/*Verifica se valores são vazios e alerta o usuario*/
         alert("Os campos de Data Limite e Descrição não podem estar vazios!");
         return;
-    } else if (form.dataLimite.value < dataAtual) {
+    } else if (form.dataLimite.value < dataAtual) { /* verifica se data é igual ou superior data atual e envia alerta ao usurario */
         alert("A Data Limite deve ser igual ou superior à data atual!");
         return
-    } else {
+    } else { /* Se todos condições forem falsas ele retornará criação do card de tarefas */
         const objTarefa = objetoTarefa();
         let novaTarefa = criarTarefa(objTarefa.dataCriacao, objTarefa.dataLimite, objTarefa.descricao, objTarefa.idTarefa);
 
-        form.dataLimite.value = "";
+        form.dataLimite.value = ""; /* reseta campo e prepara para proximo input */
         form.descricao.value = "";
 
-        minhasTarefas.push(objTarefa);
-        indexTarefas.push(objTarefa.idTarefa);
-        localStorage.setItem('arrayTarefas', JSON.stringify(minhasTarefas));
-        localStorage.setItem('idsTarefas', JSON.stringify(indexTarefas));
-        sectionTarefas.appendChild(novaTarefa);
-        location.reload();
+        minhasTarefas.push(objTarefa); /* adicionando itens ao objTarefa */
+        indexTarefas.push(objTarefa.idTarefa); /* adicionando id ao idjTarefa */
+        localStorage.setItem('arrayTarefas', JSON.stringify(minhasTarefas)); /* transforma JS em JSon */
+        localStorage.setItem('idsTarefas', JSON.stringify(indexTarefas)); /* transforma JS em JSon */
+        sectionTarefas.appendChild(novaTarefa); 
+        location.reload(); /*recarrega pagina */
     }
 })
